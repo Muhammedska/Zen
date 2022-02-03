@@ -1,0 +1,7 @@
+{
+  "name": "zen",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

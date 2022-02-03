@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "zen",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
