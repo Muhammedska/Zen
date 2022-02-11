@@ -5,38 +5,60 @@
         <ion-buttons slot="start">
           <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>{{ $route.params.id }}</ion-title>
+        <ion-title>Add</ion-title>
       </ion-toolbar>
     </ion-header>
-    
+
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">{{ $route.params.id }}</ion-title>
+          <ion-title size="large">Add</ion-title>
         </ion-toolbar>
       </ion-header>
-    
+
       <div id="container">
         <h1>Hello</h1>
-        <ion-button id='ionbtn' (click)="showAlert()" >Test</ion-button>        
+        <ion-button id="ionbtn" @click="goToPage2">Test</ion-button>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script lang="ts">
-import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
-import { defineComponent } from '@vue/runtime-core';
+import {
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from "@ionic/vue";
+import { defineComponent } from "@vue/runtime-core";
+import { SQLite, SQLiteObject, SQLiteOriginal, SQLiteTransaction,SQLiteDatabaseConfig } from  "@awesome-cordova-plugins/sqlite";
 
 
 export default defineComponent({
- 
-  showAlert() {
-    console.log('sfakdjfkls')
-  }
+  components: {
+    IonButtons,
+    IonContent,
+    IonHeader,
+    IonMenuButton,
+    IonPage,
+    IonTitle,
+    IonToolbar,
+  },
+  setup(){
+    const sqlite = new SQLite(SQLiteObject.open());
+  },
+  methods: {
+    goToPage2() {
+
+      console.log("rex");
+      SQLiteOriginal.apply.name
+    },
+  },
 });
-
-
 </script>
 
 <style scoped>
